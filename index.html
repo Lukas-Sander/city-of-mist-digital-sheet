@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>City of Mist RPG Character Sheet</title>
+  <script type="text/javascript" src="js/script.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="toolbar">
+    <button id="saveButton">Save</button>
+    <button id="loadButton">Load</button>
+    <button id="loadButton">Import</button>
+    <button id="loadButton">Export</button>
+    <button id="loadButton">Export All</button>
+    <button id="loadButton">Print</button>
+    <span id="lastSaved">Last Saved: <span class="value">Never</span>
+    <span id="currentlyOpen">currently opened: <span class="value"></span>
+  </div>
+  <div id="sheet" class="container sortable">
+    
+    <div class="card" id="cardA">
+      <form>
+        
+        <table>
+          <tr>
+            <td style="width: 100%;">
+              <input style="font-size: 1.25em;" type="text" id="unlabeledTextInputA" name="unlabeledTextInput">
+            </td>
+            <td>
+              <select id="titleSelectA" name="title">
+                <option value="Mythos">⚡</option>
+                <option value="Logos">👓</option>
+              </select>
+            </td>
+          </tr>
+        </table>
+        
+        <table>
+          <tr>
+            <td>
+              <p><strong>Attention:</strong></p>
+              <input type="checkbox" id="attention1InputA" name="attention"> 
+              <input type="checkbox" id="attention2InputA" name="attention"> 
+              <input type="checkbox" id="attention3InputA" name="attention"> 
+            </td>
+            <td>
+              <p><strong>Fade / Crack:</strong></p>
+              <input type="checkbox" id="fadeCrack1InputA" name="fadeCrack"> 
+              <input type="checkbox" id="fadeCrack2InputA" name="fadeCrack"> 
+              <input type="checkbox" id="fadeCrack3InputA" name="fadeCrack"> 
+            </td>
+          </tr>
+        </table>
+        
+        <label for="mysteryIdentity">Mystery / Identity:</label>
+        <textarea id="mysteryIdentityTextareaA" name="mysteryIdentity" rows="4"></textarea>
+        
+        <table>
+          <tr>
+            <th colspan="2">Power Tags</th>
+            <th>Burn</th>
+          </tr>
+          <tr>
+            <td><input type="text" style="width: 2em;" id="powerTag1InputA"></td>
+            <td style="width: 100%;"><input type="text" id="powerTagDesc1InputA"></td>
+            <td><input type="checkbox" id="burn1InputA" name="burn"></td>
+          </tr>
+          <tr>
+            <td><input type="text" style="width: 2em;" id="powerTag2InputA"></td>
+            <td><input type="text" id="powerTagDesc2InputA"></td>
+            <td><input type="checkbox" id="burn2InputA" name="burn"></td>
+          </tr>
+          <tr>
+            <td><input type="text" style="width: 2em;" id="powerTag3InputA"></td>
+            <td><input type="text" id="powerTagDesc3InputA"></td>
+            <td><input type="checkbox" id="burn3InputA" name="burn"></td>
+          </tr>
+          <tr>
+            <td><input type="text" style="width: 2em;" id="powerTag4InputA"></td>
+            <td><input type="text" id="powerTagDesc4InputA"></td>
+            <td><input type="checkbox" id="burn4InputA" name="burn"></td>
+          </tr>
+          <tr>
+            <td><input type="text" style="width: 2em;" id="powerTag5InputA"></td>
+            <td><input type="text" id="powerTagDesc5InputA"></td>
+            <td><input type="checkbox" id="burn5InputA" name="burn"></td>
+          </tr>
+          <tr>
+            <td><input type="text" style="width: 2em;" id="powerTag6InputA"></td>
+            <td><input type="text" id="powerTagDesc6InputA"></td>
+            <td><input type="checkbox" id="burn6InputA" name="burn"></td>
+          </tr>
+          <tr>
+            <td><input type="text" style="width: 2em;" id="powerTag7InputA"></td>
+            <td><input type="text" id="powerTagDesc7InputA"></td>
+            <td><input type="checkbox" id="burn7InputA" name="burn"></td>
+          </tr>
+        </table>
+        
+        <table>
+          <tr>
+            <th colspan="2">Weakness Tags</th>
+            <th>Invoke</th>
+          </tr>
+          <tr>
+            <td><input type="text" style="width: 2em;" id="weaknessTag1InputA"></td>
+            <td style="width: 100%;"><input type="text" id="weaknessTagDesc1InputA"></td>
+            <td><input type="checkbox" id="invoke1InputA" name="invoke"></td>
+          </tr>
+          <tr>
+            <td><input type="text" style="width: 2em;" id="weaknessTag2InputA"></td>
+            <td><input type="text" id="weaknessTagDesc2InputA"></td>
+            <td><input type="checkbox" id="invoke2InputA" name="invoke"></td>
+          </tr>
+          <tr>
+            <td><input type="text" style="width: 2em;" id="weaknessTag3InputA"></td>
+            <td><input type="text" id="weaknessTagDesc3InputA"></td>
+            <td><input type="checkbox" id="invoke3InputA" name="invoke"></td>
+          </tr>
+        </table>
+      </form>
+    </div>
+    
+    <div class="card" id="cardB">
+      <form>
+        
+        <table>
+          <tr>
+            <td style="width: 100%;">
+              <input style="font-size: 1.25em;" type="text" id="unlabeledTextInputB" name="unlabeledTextInput">
+            </td>
+            <td>
+              <select id="titleSelectB" name="title">
+                <option value="Mythos">⚡</option>
+                <option value="Logos">👓</option>
+              </select>
+            </td>
+          </tr>
+        </table>
+        
+        <table>
+          <tr>
+            <td>
+              <p><strong>Attention:</strong></p>
+              <input type="checkbox" id="attention1InputB" name="attention">
+              <input type="checkbox" id="attention2InputB" name="attention">
+              <input type="checkbox" id="attention3InputB" name="attention">
+            </td>
+            <td>
+              <p><strong>Fade / Crack:</strong></p>
+              <input type="checkbox" id="fadeCrack1InputB" name="fadeCrack">
+              <input type="checkbox" id="fadeCrack2InputB" name="fadeCrack">
+              <input type="checkbox" id="fadeCrack3InputB" name="fadeCrack">
+            </td>
+          </tr>
+        </table>
+        
+        <label for="mysteryIdentity">Mystery / Identity:</label>
+        <textarea id="mysteryIdentityTextareaB" name="mysteryIdentity" rows="4"></textarea>
+        
+        <table>
+          <tr>
+            <th colspan="2">Power Tags</th>
+            <th>Burn</th>
+          </tr>
+          <tr>
+            <td><input type="text" style="width: 2em;" id="powerTag1InputB"></td>
+            <td style="width: 100%;"><input type="text" id="powerTagDesc1InputB"></td>
+            <td><input type="checkbox" id="burn1InputB" name="burn"></td>
+          </tr>
+          <tr>
+            <td><input type="text" style="width: 2em;" id="powerTag2InputB"></td>
+            <td><input type="text" id="powerTagDesc2InputB"></td>
+            <td><input type="checkbox" id="burn2InputB" name="burn"></td>
+          </tr>
+          <tr>
+            <td><input type="text" style="width: 2em;" id="powerTag3InputB"></td>
+            <td><input type="text" id="powerTagDesc3InputB"></td>
+            <td><input type="checkbox" id="burn3InputB" name="burn"></td>
+          </tr>
+          <tr>
+            <td><input type="text" style="width: 2em;" id="powerTag4InputB"></td>
+            <td><input type="text" id="powerTagDesc4InputB"></td>
+            <td><input type="checkbox" id="burn4InputB" name="burn"></td>
+          </tr>
+          <tr>
+            <td><input type="text" style="width: 2em;" id="powerTag5InputB"></td>
+            <td><input type="text" id="powerTagDesc5InputB"></td>
+            <td><input type="checkbox" id="burn5InputB" name="burn"></td>
+          </tr>
+          <tr>
+            <td><input type="text" style="width: 2em;" id="powerTag6InputB"></td>
+            <td><input type="text" id="powerTagDesc6InputB"></td>
+            <td><input type="checkbox" id="burn6InputB" name="burn"></td>
+          </tr>
+          <tr>
+            <td><input type="text" style="width: 2em;" id="powerTag7InputB"></td>
+            <td><input type="text" id="powerTagDesc7InputB"></td>
+            <td><input type="checkbox" id="burn7InputB" name="burn"></td>
+          </tr>
+        </table>
+        
+        <table>
+          <tr>
+            <th colspan="2">Weakness Tags</th>
+            <th>Invoke</th>
+          </tr>
+          <tr>
+            <td><input type="text" style="width: 2em;" id="weaknessTag1InputB"></td>
+            <td style="width: 100%;"><input type="text" id="weaknessTagDesc1InputB"></td>
+            <td><input type="checkbox" id="invoke1InputB" name="invoke"></td>
+          </tr>
+          <tr>
+            <td><input type="text" style="width: 2em;" id="weaknessTag2InputB"></td>
+            <td><input type="text" id="weaknessTagDesc2InputB"></td>
+            <td><input type="checkbox" id="invoke2InputB" name="invoke"></td>
+          </tr>
+          <tr>
+            <td><input type="text" style="width: 2em;" id="weaknessTag3InputB"></td>
+            <td><input type="text" id="weaknessTagDesc3InputB"></td>
+            <td><input type="checkbox" id="invoke3InputB" name="invoke"></td>
+          </tr>
+        </table>
+      </form>
+    </div>
+    
+    <div class="card" id="cardC">
+      <form>
+        
+        <table>
+          <tr>
+            <td style="width: 100%;">
+              <input style="font-size: 1.25em;" type="text" id="unlabeledTextInputC" name="unlabeledTextInput">
+            </td>
+            <td>
+              <select id="titleSelectC" name="title">
+                <option value="Mythos">⚡</option>
+                <option value="Logos">👓</option>
+              </select>
+            </td>
+          </tr>
+        </table>
+        
+        <table>
+          <tr>
+            <td>
+              <p><strong>Attention:</strong></p>
+              <input type="checkbox" id="attention1InputC" name="attention">
+              <input type="checkbox" id="attention2InputC" name="attention">
+              <input type="checkbox" id="attention3InputC" name="attention">
+            </td>
+            <td>
+              <p><strong>Fade / Crack:</strong></p>
+              <input type="checkbox" id="fadeCrack1InputC" name="fadeCrack">
+              <input type="checkbox" id="fadeCrack2InputC" name="fadeCrack">
+              <input type="checkbox" id="fadeCrack3InputC" name="fadeCrack">
+            </td>
+          </tr>
+        </table>
+        
+        <label for="mysteryIdentity">Mystery / Identity:</label>
+        <textarea id="mysteryIdentityTextareaC" name="mysteryIdentity" rows="4"></textarea>
+        
+        <table>
+          <tr>
+            <th colspan="2">Power Tags</th>
+            <th>Burn</th>
+          </tr>
+          <tr>
+            <td><input type="text" style="width: 2em;" id="powerTag1InputC"></td>
+            <td style="width: 100%;"><input type="text" id="powerTagDesc1InputC"></td>
+            <td><input type="checkbox" id="burn1InputC" name="burn"></td>
+          </tr>
+          <tr>
+            <td><input type="text" style="width: 2em;" id="powerTag2InputC"></td>
+            <td><input type="text" id="powerTagDesc2InputC"></td>
+            <td><input type="checkbox" id="burn2InputC" name="burn"></td>
+          </tr>
+          <tr>
+            <td><input type="text" style="width: 2em;" id="powerTag3InputC"></td>
+            <td><input type="text" id="powerTagDesc3InputC"></td>
+            <td><input type="checkbox" id="burn3InputC" name="burn"></td>
+          </tr>
+          <tr>
+            <td><input type="text" style="width: 2em;" id="powerTag4InputC"></td>
+            <td><input type="text" id="powerTagDesc4InputC"></td>
+            <td><input type="checkbox" id="burn4InputC" name="burn"></td>
+          </tr>
+          <tr>
+            <td><input type="text" style="width: 2em;" id="powerTag5InputC"></td>
+            <td><input type="text" id="powerTagDesc5InputC"></td>
+            <td><input type="checkbox" id="burn5InputC" name="burn"></td>
+          </tr>
+          <tr>
+            <td><input type="text" style="width: 2em;" id="powerTag6InputC"></td>
+            <td><input type="text" id="powerTagDesc6InputC"></td>
+            <td><input type="checkbox" id="burn6InputC" name="burn"></td>
+          </tr>
+          <tr>
+            <td><input type="text" style="width: 2em;" id="powerTag7InputC"></td>
+            <td><input type="text" id="powerTagDesc7InputC"></td>
+            <td><input type="checkbox" id="burn7InputC" name="burn"></td>
+          </tr>
+        </table>
+        
+        <table>
+          <tr>
+            <th colspan="2">Weakness Tags</th>
+            <th>Invoke</th>
+          </tr>
+          <tr>
+            <td><input type="text" style="width: 2em;" id="weaknessTag1InputC"></td>
+            <td style="width: 100%;"><input type="text" id="weaknessTagDesc1InputC"></td>
+            <td><input type="checkbox" id="invoke1InputC" name="invoke"></td>
+          </tr>
+          <tr>
+            <td><input type="text" style="width: 2em;" id="weaknessTag2InputC"></td>
+            <td><input type="text" id="weaknessTagDesc2InputC"></td>
+            <td><input type="checkbox" id="invoke2InputC" name="invoke"></td>
+          </tr>
+          <tr>
+            <td><input type="text" style="width: 2em;" id="weaknessTag3InputC"></td>
+            <td><input type="text" id="weaknessTagDesc3InputC"></td>
+            <td><input type="checkbox" id="invoke3InputC" name="invoke"></td>
+          </tr>
+        </table>
+      </form>
+    </div>
+    
+    <div class="card" id="cardD">
+      <form>
+        
+        <table>
+          <tr>
+            <td style="width: 100%;">
+              <input style="font-size: 1.25em;" type="text" id="unlabeledTextInputD" name="unlabeledTextInput">
+            </td>
+            <td>
+              <select id="titleSelectD" name="title">
+                <option value="Mythos">⚡</option>
+                <option value="Logos">👓</option>
+              </select>
+            </td>
+          </tr>
+        </table>
+        
+        <table>
+          <tr>
+            <td>
+              <p><strong>Attention:</strong></p>
+              <input type="checkbox" id="attention1InputD" name="attention">
+              <input type="checkbox" id="attention2InputD" name="attention">
+              <input type="checkbox" id="attention3InputD" name="attention">
+            </td>
+            <td>
+              <p><strong>Fade / Crack:</strong></p>
+              <input type="checkbox" id="fadeCrack1InputD" name="fadeCrack">
+              <input type="checkbox" id="fadeCrack2InputD" name="fadeCrack">
+              <input type="checkbox" id="fadeCrack3InputD" name="fadeCrack">
+            </td>
+          </tr>
+        </table>
+        
+        <label for="mysteryIdentity">Mystery / Identity:</label>
+        <textarea id="mysteryIdentityTextareaD" name="mysteryIdentity" rows="4"></textarea>
+        
+        <table>
+          <tr>
+            <th colspan="2">Power Tags</th>
+            <th>Burn</th>
+          </tr>
+          <tr>
+            <td><input type="text" style="width: 2em;" id="powerTag1InputD"></td>
+            <td style="width: 100%;"><input type="text" id="powerTagDesc1InputD"></td>
+            <td><input type="checkbox" id="burn1InputD" name="burn"></td>
+          </tr>
+          <tr>
+            <td><input type="text" style="width: 2em;" id="powerTag2InputD"></td>
+            <td><input type="text" id="powerTagDesc2InputD"></td>
+            <td><input type="checkbox" id="burn2InputD" name="burn"></td>
+          </tr>
+          <tr>
+            <td><input type="text" style="width: 2em;" id="powerTag3InputD"></td>
+            <td><input type="text" id="powerTagDesc3InputD"></td>
+            <td><input type="checkbox" id="burn3InputD" name="burn"></td>
+          </tr>
+          <tr>
+            <td><input type="text" style="width: 2em;" id="powerTag4InputD"></td>
+            <td><input type="text" id="powerTagDesc4InputD"></td>
+            <td><input type="checkbox" id="burn4InputD" name="burn"></td>
+          </tr>
+          <tr>
+            <td><input type="text" style="width: 2em;" id="powerTag5InputD"></td>
+            <td><input type="text" id="powerTagDesc5InputD"></td>
+            <td><input type="checkbox" id="burn5InputD" name="burn"></td>
+          </tr>
+          <tr>
+            <td><input type="text" style="width: 2em;" id="powerTag6InputD"></td>
+            <td><input type="text" id="powerTagDesc6InputD"></td>
+            <td><input type="checkbox" id="burn6InputD" name="burn"></td>
+          </tr>
+          <tr>
+            <td><input type="text" style="width: 2em;" id="powerTag7InputD"></td>
+            <td><input type="text" id="powerTagDesc7InputD"></td>
+            <td><input type="checkbox" id="burn7InputD" name="burn"></td>
+          </tr>
+        </table>
+        
+        <table>
+          <tr>
+            <th colspan="2">Weakness Tags</th>
+            <th>Invoke</th>
+          </tr>
+          <tr>
+            <td><input type="text" style="width: 2em;" id="weaknessTag1InputD"></td>
+            <td style="width: 100%;"><input type="text" id="weaknessTagDesc1InputD"></td>
+            <td><input type="checkbox" id="invoke1InputD" name="invoke"></td>
+          </tr>
+          <tr>
+            <td><input type="text" style="width: 2em;" id="weaknessTag2InputD"></td>
+            <td><input type="text" id="weaknessTagDesc2InputD"></td>
+            <td><input type="checkbox" id="invoke2InputD" name="invoke"></td>
+          </tr>
+          <tr>
+            <td><input type="text" style="width: 2em;" id="weaknessTag3InputD"></td>
+            <td><input type="text" id="weaknessTagDesc3InputD"></td>
+            <td><input type="checkbox" id="invoke3InputD" name="invoke"></td>
+          </tr>
+        </table>
+      </form>
+    </div>
+    
+  </div>
+  
+  <template id="imageTemplate">
+    <div class="imageContainer">
+      <img src="" alt="Selected Image" style="max-width: 100%; display: none;">
+      <input type="file" accept="image/*">
+      <button class="removeElement">Remove</button>
+    </div>
+  </template>
+  
+  <div id="cardTemplate">
+    <div class="card">
+      <div class="d-flex gap-2">
+        <h3 contenteditable="plaintext-only" class="flex-grow-1">Card Title</h3>
+        <select name="type">
+          <option value="Mythos">⚡</option>
+          <option value="Logos">👓</option>
+          <option value="Character">👤</option>
+          <option value="Crew">👥</option>
+        </select>
+      </div>
+      
+      <div data-type="Character" class="display-contents">
+        <button data-type="Character" class="addElement" data-template="">Add Image</button>
+        <div class="imageContainer sortable">
+        </div>
+        
+        <label>
+          Player Name:
+          <span class="textinput" contenteditable="plaintext-only"></span>
+        </label>
+        
+        <label for="mythos">Mythos:</label>
+        <textarea id="mythosInput" name="mythos" required></textarea>
+        
+        <label for="logos">Logos:</label>
+        <textarea id="logosInput" name="logos" required></textarea>
+        
+        <label for="description">Description:</label>
+        <textarea id="descriptionInput" name="description" rows="4" required></textarea>
+        
+        <label for="storyTags">Story Tags:</label>
+        <textarea id="storyTagsInput" name="storyTags" rows="4"></textarea>
+      </div>
+      
+      
+    </div>
+  </template>
+</body>
+</html>
